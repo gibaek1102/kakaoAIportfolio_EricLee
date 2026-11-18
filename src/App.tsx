@@ -17,8 +17,8 @@ const INITIAL_DATA = {
     avatarUrl: "wave", // key into the embedded IMG table at the bottom of this file (or any normal URL)
     heroSloganEn: "I am a student studying algorithms.",
     heroSloganKo: "알고리즘을 공부하는 학생입니다.",
-    bioEn: "Eric Lee (Gibaek Lee)\nI study olympiad mathematics and competitive programming.\nI am in charge of problem setting for the Daeshin High School Algorithm Contest 2026.\nChesstro (a chess site) and AItopia (Polytopia bot research) are built together with an AI tool (Claude).",
-    bioKo: "이기백\n올림피아드 수학과 경쟁 프로그래밍을 공부합니다.\n대신고등학교 알고리즘 대회 2026 문제 출제를 맡고 있습니다.\nChesstro(체스 사이트)와 AItopia(폴리토피아 봇 연구)는 AI 도구(Claude)와 함께 만들고 있습니다.",
+    bioEn: "I study olympiad mathematics and competitive programming.\nI am in charge of problem setting for the Daeshin High School Algorithm Contest 2026.\nChesstro (a chess site) and AItopia (Polytopia bot research) are built together with an AI tool (Claude).",
+    bioKo: "올림피아드 수학과 경쟁 프로그래밍을 공부합니다.\n대신고등학교 알고리즘 대회 2026 문제 출제를 맡고 있습니다.\nChesstro(체스 사이트)와 AItopia(폴리토피아 봇 연구)는 AI 도구(Claude)와 함께 만들고 있습니다.",
     github: "https://github.com/gibaek1102",
     solvedAc: "https://solved.ac/profile/gibaek1102",
     dojUser: "https://doj.kr/ko/user/ericlee",
@@ -75,11 +75,19 @@ const INITIAL_DATA = {
   awards: [
     {
       year: "2026",
+      titleEn: "NYPC 2026 Bronze Award",
+      titleKo: "NYPC 2026 동상",
+      org: "NYPC",
+      detailsKo: "NYPC 2026 동상.",
+      detailsEn: "NYPC 2026 Bronze Award."
+    },
+    {
+      year: "2026",
       titleEn: "KOI 1st Round Gold (Overall & Regional) & 2nd Round Bronze",
       titleKo: "제43회 한국정보올림피아드(KOI) 1차 중등부 전체부문 금상 · 지역부문 금상 & 2차 동상",
       org: "한국정보올림피아드위원회",
-      detailsKo: "1차 대회 중등부 전체부문 금상 및 지역부문 금상. 2차 동상, NYPC Bronze Award.",
-      detailsEn: "43rd KOI 1st Round, Middle School Division: Gold in both the Overall and Regional categories. 2nd Round Bronze, NYPC Bronze Award.",
+      detailsKo: "1차 대회 중등부 전체부문 금상 및 지역부문 금상. 2차 동상.",
+      detailsEn: "43rd KOI 1st Round, Middle School Division: Gold in both the Overall and Regional categories. 2nd Round Bronze.",
       images: [
         { key: "koi43_overall", labelKo: "제43회 KOI 1차 전체부문 금상", labelEn: "43rd KOI 1st Round — Overall Gold" },
         { key: "koi43_regional", labelKo: "제43회 KOI 1차 지역부문 금상", labelEn: "43rd KOI 1st Round — Regional Gold" }

@@ -18,8 +18,8 @@ const INITIAL_DATA = {
     avatarUrl: "wave", // key into the embedded IMG table at the bottom of this file (or any normal URL)
     heroSloganEn: "I am a student studying algorithms.",
     heroSloganKo: "알고리즘을 공부하는 학생입니다.",
-    bioEn: "I am Eric Lee (Gibaek Lee). I study olympiad mathematics and competitive programming. I am in charge of problem setting for the Daeshin High School Algorithm Contest 2026. The Chesstro chess site and the AItopia Polytopia bot research are built together with an AI tool (Claude).",
-    bioKo: "이기백입니다. 올림피아드 수학과 경쟁 프로그래밍을 공부합니다. 대신고등학교 알고리즘 대회 2026의 문제 출제를 맡고 있습니다. 체스 사이트 Chesstro와 폴리토피아 봇 연구 AItopia는 AI 도구(Claude)와 함께 만들고 있습니다.",
+    bioEn: "Eric Lee (Gibaek Lee)\nI study olympiad mathematics and competitive programming.\nI am in charge of problem setting for the Daeshin High School Algorithm Contest 2026.\nChesstro (a chess site) and AItopia (Polytopia bot research) are built together with an AI tool (Claude).",
+    bioKo: "이기백\n올림피아드 수학과 경쟁 프로그래밍을 공부합니다.\n대신고등학교 알고리즘 대회 2026 문제 출제를 맡고 있습니다.\nChesstro(체스 사이트)와 AItopia(폴리토피아 봇 연구)는 AI 도구(Claude)와 함께 만들고 있습니다.",
     github: "https://github.com/gibaek1102",
     solvedAc: "https://solved.ac/profile/gibaek1102",
     dojUser: "https://doj.kr/ko/user/ericlee",

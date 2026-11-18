@@ -46,8 +46,8 @@ const INITIAL_DATA = {
       num: "03",
       titleEn: "3. Advance theory and implementation together",
       titleKo: "3. 이론과 구현을 같이 간다.",
-      descEn: "Building self-play reinforcement learning infrastructure for the Polytopia bot 'Solaris' while continuously exploring mathematical problem structures.",
-      descKo: "수학적/알고리즘적 구조를 파고드는 한편, 폴리토피아 봇 '솔라리스'의 자기 대국 강화학습 인프라를 직접 쌓고 있습니다."
+      descEn: "Building self-play reinforcement learning infrastructure for a Polytopia bot in the AItopia project while continuously exploring mathematical problem structures.",
+      descKo: "수학적/알고리즘적 구조를 파고드는 한편, AItopia 프로젝트에서 폴리토피아 봇의 자기 대국 강화학습 인프라를 직접 쌓고 있습니다."
     },
     {
       num: "04",

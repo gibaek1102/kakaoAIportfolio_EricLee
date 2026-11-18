@@ -217,8 +217,8 @@ const INITIAL_DATA = {
     violin: {
       titleEn: "Violin",
       titleKo: "바이올린 연주",
-      descEn: "Playing violin as an artistic counterbalance to algorithmic rigor.",
-      descKo: "알고리즘 탐색의 긴장감을 정리해주는 바이올린 연주 활동.",
+      descEn: "I play the violin.",
+      descKo: "바이올린을 연주합니다.",
     },
     hobbies: [
       { ko: "폴리토피아 (플레이 · 모드 · 봇 제작)", en: "Polytopia (playing, modding, bot building)" },

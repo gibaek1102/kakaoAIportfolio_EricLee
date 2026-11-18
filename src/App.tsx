@@ -215,8 +215,6 @@ const INITIAL_DATA = {
       titleKo: "바이올린 연주",
       descEn: "Playing violin as an artistic counterbalance to algorithmic rigor.",
       descKo: "알고리즘 탐색의 긴장감을 정리해주는 바이올린 연주 활동.",
-      // 영상 추가: { titleKo, titleEn, src: "mp4 주소" } 또는 { titleKo, titleEn, youtubeId: "유튜브 영상 ID" }
-      videos: []
     },
     hobbies: [
       { ko: "폴리토피아 (플레이 · 모드 · 봇 제작)", en: "Polytopia (playing, modding, bot building)" },
@@ -816,37 +814,6 @@ export default function App() {
                 </p>
               </div>
 
-              {data.passions.violin.videos && data.passions.violin.videos.length > 0 ? (
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {data.passions.violin.videos.map((v, i) => (
-                    <figure key={i} className="space-y-1.5">
-                      {v.youtubeId ? (
-                        <iframe
-                          className="w-full aspect-video rounded-lg"
-                          src={`https://www.youtube.com/embed/${v.youtubeId}`}
-                          title={isEn ? v.titleEn : v.titleKo}
-                          allowFullScreen
-                        />
-                      ) : (
-                        <video
-                          controls
-                          preload="metadata"
-                          playsInline
-                          src={v.src}
-                          className="w-full aspect-video rounded-lg bg-black"
-                        />
-                      )}
-                      <figcaption className={`text-xs ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
-                        {isEn ? v.titleEn : v.titleKo}
-                      </figcaption>
-                    </figure>
-                  ))}
-                </div>
-              ) : (
-                <p className={`text-xs font-mono ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>
-                  {isEn ? "Performance videos coming soon." : "연주 영상은 준비 중입니다."}
-                </p>
-              )}
             </div>
 
             {/* Interests */}

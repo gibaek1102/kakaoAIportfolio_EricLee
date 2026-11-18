@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { 
   Sun,
   Moon,
-  BookOpen,
   Zap,
   ArrowUpRight
 } from "lucide-react";
@@ -355,8 +354,7 @@ export default function App() {
               <h2 className={`text-xl font-bold mb-4 flex items-center gap-2 ${
                 isDark ? 'text-slate-100' : 'text-slate-900'
               }`}>
-                <BookOpen className="w-5 h-5 text-sky-400" />
-                {isEn ? "Statement" : "자기소개"}
+                {isEn ? "About" : "소개"}
               </h2>
               <p className={`text-base leading-loose whitespace-pre-line ${
                 isDark ? 'text-slate-300' : 'text-slate-700'
@@ -369,10 +367,10 @@ export default function App() {
             <div className="space-y-6">
               <div className="space-y-1">
                 <h2 className={`text-2xl font-bold tracking-tight ${isDark ? 'text-slate-100' : 'text-slate-900'}`}>
-                  {isEn ? "Values & Beliefs" : "가치관과 신념"}
+                  {isEn ? "How I Work" : "작업 방식"}
                 </h2>
                 <p className={`text-xs ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
-                  {isEn ? "The beliefs and working habits behind my problem setting and projects." : "프로젝트와 문제 출제 과정에서 일관되게 지키는 5가지 신념과 작업 방식입니다."}
+                  {isEn ? "Standards I follow in problem setting and projects." : "문제 출제와 프로젝트에서 지키는 기준입니다."}
                 </p>
               </div>
 

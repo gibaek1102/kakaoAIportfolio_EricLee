@@ -19,8 +19,8 @@ const INITIAL_DATA = {
     avatarUrl: "wave", // key into the embedded IMG table at the bottom of this file (or any normal URL)
     heroSloganEn: "I am a student studying algorithms.",
     heroSloganKo: "알고리즘을 공부하는 학생입니다.",
-    bioEn: "I am Eric Lee (Gibaek Lee). I study olympiad mathematics and competitive programming. I am in charge of problem setting for the Daeshin High School Algorithm Contest 2026. I also build projects myself, including the Chesstro chess site and the AItopia Polytopia bot.",
-    bioKo: "이기백입니다. 올림피아드 수학과 경쟁 프로그래밍을 공부합니다. 대신고등학교 알고리즘 대회 2026의 문제 출제를 맡고 있습니다. 체스 엔진 Chesstro와 폴리토피아 봇 AItopia도 직접 만들고 있습니다.",
+    bioEn: "I am Eric Lee (Gibaek Lee). I study olympiad mathematics and competitive programming. I am in charge of problem setting for the Daeshin High School Algorithm Contest 2026. The Chesstro chess site and the AItopia Polytopia bot research are built together with an AI tool (Claude).",
+    bioKo: "이기백입니다. 올림피아드 수학과 경쟁 프로그래밍을 공부합니다. 대신고등학교 알고리즘 대회 2026의 문제 출제를 맡고 있습니다. 체스 사이트 Chesstro와 폴리토피아 봇 연구 AItopia는 AI 도구(Claude)와 함께 만들고 있습니다.",
     email: "gibaek1102@gmail.com",
     github: "https://github.com/gibaek1102",
     solvedAc: "https://solved.ac/profile/gibaek1102",
@@ -47,7 +47,7 @@ const INITIAL_DATA = {
       titleEn: "Do theory and implementation together",
       titleKo: "이론과 구현을 함께 한다",
       descEn: "Building self-play reinforcement learning infrastructure for a Polytopia bot while continuously exploring mathematical problem structures.",
-      descKo: "수학과 알고리즘의 구조를 공부하면서, 폴리토피아 봇의 자기 대국 강화학습 환경도 직접 만들고 있습니다.",
+      descKo: "수학과 알고리즘의 구조를 공부하면서, 폴리토피아 봇의 자기 대국 강화학습 환경도 만들고 있습니다.",
     },
     {
       num: "04",
@@ -150,8 +150,8 @@ const INITIAL_DATA = {
       titleEn: "Chesstro — Web Chess with the Terranion 1.4 Engine",
       titleKo: "Chesstro — Terranion 1.4 엔진 웹 체스",
       badge: "Standalone Site",
-      descEn: "A web chess site with an NNUE evaluation I trained myself. The engine is Terranion 1.4. You can choose color, piece theme and engine think time, use undo, flip and resign, watch engines play each other, and download recent games as PGN.",
-      descKo: "직접 학습시킨 NNUE 평가 함수를 쓰는 웹 체스입니다. 엔진은 Terranion 1.4입니다. 색, 말 테마, 생각 시간을 정하고 무르기·뒤집기·기권을 쓸 수 있습니다. 엔진끼리 두는 대국을 보고 최근 기보를 PGN으로 받을 수 있습니다.",
+      descEn: "A web chess site with an NNUE evaluation. The engine is Terranion 1.4. You can choose color, piece theme and engine think time, use undo, flip and resign, watch engines play each other, and download recent games as PGN.",
+      descKo: "NNUE 평가 함수를 쓰는 웹 체스입니다. 엔진은 Terranion 1.4입니다. 색, 말 테마, 생각 시간을 정하고 무르기·뒤집기·기권을 쓸 수 있습니다. 엔진끼리 두는 대국을 보고 최근 기보를 PGN으로 받을 수 있습니다.",
       liveUrl: "https://gibaek1102.github.io/chesstro/#play",
             tech: ["NNUE", "UCI", "Self-Play", "PGN"]
     },
@@ -523,7 +523,7 @@ export default function App() {
                 {isEn ? "Projects" : "프로젝트"}
               </h1>
               <p className={`text-sm ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
-                {isEn ? "Engines, bots, and tools I have built." : "직접 만든 엔진, 봇, 도구 프로젝트 목록입니다."}
+                {isEn ? "Engine, bot, and tool projects." : "엔진, 봇, 도구 프로젝트 목록입니다."}
               </p>
             </div>
 

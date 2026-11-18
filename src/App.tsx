@@ -39,8 +39,8 @@ const INITIAL_DATA = {
       num: "02",
       titleEn: "Run it before trusting it",
       titleKo: "돌려 보고 나서 믿는다",
-      descEn: "Every problem I set is checked with random stress tests and variant solutions I implement myself, to catch counterexamples and corner cases.",
-      descKo: "출제한 문제는 무작위 스트레스 테스트와 직접 짠 변형 풀이로 반례와 예외 경우를 확인합니다.",
+      descEn: "Every problem I set is checked with random stress tests run through Claude, to catch counterexamples and corner cases.",
+      descKo: "출제한 문제는 Claude로 무작위 스트레스 테스트를 돌려 반례와 예외 경우를 확인합니다.",
     },
     {
       num: "03",

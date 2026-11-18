@@ -705,6 +705,7 @@ export default function App() {
         <div className="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono">
           <div>
             © 2026 Eric Lee (이기백). All rights reserved.
+            <p className="mt-1 opacity-80">이 사이트는 AI 도구(Claude)의 도움을 받아 만들었습니다. 수상 기록과 프로젝트 내용은 본인이 확인했습니다.</p>
           </div>
           <div className="flex items-center gap-4">
             <a href={data.profile.solvedAc} target="_blank" rel="noreferrer" className="hover:text-sky-400 transition">solved.ac</a>

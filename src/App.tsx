@@ -18,9 +18,9 @@ const INITIAL_DATA = {
     roleKo: "경쟁 프로그래밍 · 수학 올림피아드",
     avatarUrl: "wave", // key into the embedded IMG table at the bottom of this file (or any normal URL)
     heroSloganEn: "Exploring Olympiad Math & Competitive Programming. Designing algorithmic problems and building intelligent systems.",
-    heroSloganKo: "올림피아드 수학과 경쟁 알고리즘을 공부하고 있으며, 고등학생 알고리즘 대회 문제 출제와 체스 엔진, 봇 프로젝트를 진행하고 있습니다.",
+    heroSloganKo: "경쟁 수학과 알고리즘을 공부합니다. 고등학생 알고리즘 대회 문제를 출제하고, 체스 엔진과 봇을 직접 만듭니다.",
     bioEn: "Hi, I'm Eric Lee (Gibaek Lee). I study Olympiad Mathematics and Competitive Programming (CP), and serve as a problem setter for high school algorithm contests, including Daeshin High School Algorithm Contest 2026. Alongside problem setting, I implement projects like custom chess engines and autonomous Polytopia bots.",
-    bioKo: "안녕하세요, 이기백입니다. 경쟁 수학(올림피아드)과 알고리즘 경쟁 프로그래밍(CP)을 공부하고 있으며, 고등학생 알고리즘 대회의 문제를 설계하고 있습니다. 대신고등학교 알고리즘 대회 2026의 문제 출제를 맡고 있으며, 문제를 만드는 일과 함께 체스 엔진, 폴리토피아 봇처럼 직접 구현하는 프로젝트도 진행하고 있습니다.",
+    bioKo: "이기백입니다. 올림피아드 수학과 경쟁 프로그래밍을 공부합니다. 대신고등학교 알고리즘 대회 2026의 문제 출제를 맡고 있습니다. 체스 엔진 Chesstro와 폴리토피아 봇 AItopia도 직접 만들고 있습니다.",
     email: "gibaek1102@gmail.com",
     github: "https://github.com/gibaek1102",
     solvedAc: "https://solved.ac/profile/gibaek1102",

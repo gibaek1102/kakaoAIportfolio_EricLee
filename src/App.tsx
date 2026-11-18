@@ -59,7 +59,7 @@ const INITIAL_DATA = {
     {
       num: "05",
       titleEn: "Seek facts, not the feeling of success",
-      titleKo: "된 것 같은 느낌보다 확인된 결과를 따른다",
+      titleKo: "기대보다 확인된 결과를 따른다",
       descEn: "I value learning what is actually true over feeling successful. The AItopia research notes record failed attempts alongside pre-set criteria, and I did not change the criteria after seeing results.",
       descKo: "AItopia 연구 노트에는 실패한 시도까지 미리 정한 합격 기준과 함께 적었습니다. 결과를 본 뒤에 기준을 바꾸지 않았습니다.",
     }

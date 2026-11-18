@@ -352,7 +352,7 @@ export default function App() {
                     src={resolveImg(data.profile.avatarUrl)}
                     alt={data.profile.nameEn}
                     style={{ width: 44, height: 44 }}
-                    className="w-11 h-11 object-contain drop-shadow group-hover:scale-110 transition-transform"
+                    className="w-11 h-11 rounded-full object-cover ring-1 ring-sky-500/30 group-hover:scale-110 transition-transform"
                     onError={(e) => { 
                       e.currentTarget.style.display = 'none'; 
                       const fallback = e.currentTarget.nextElementSibling;

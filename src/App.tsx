@@ -181,7 +181,51 @@ const INITIAL_DATA = {
       // liveUrl / githubUrl은 있을 때만 버튼이 나옵니다. 저장소를 올리면 githubUrl을 추가하세요.
       tech: ["Python", "Tkinter", "LIS", "Josephus"]
     }
-  ]
+  ],
+  passions: {
+    // 디자인 출원: 출원 전 디자인은 공개하지 않고 "준비 중"으로만 표기합니다.
+    // 출원 후에는 아래처럼 항목을 추가하세요 (물품명 + 출원번호 + 출원일 + 상태):
+    // { titleKo: "펜꽂이", titleEn: "Pen Holder", statusKo: "출원 완료", statusEn: "Filed",
+    //   appNo: "30-2026-0000000", appDate: "2026-00-00", descKo: "...", descEn: "..." }
+    // 등록되면 statusKo를 "등록"으로 바꾸고 등록번호를 regNo에 적습니다.
+    designs: [
+      {
+        titleKo: "육각기둥 연필꽂이",
+        titleEn: "Hexagonal Prism Pencil Holder",
+        statusKo: "출원 준비 중",
+        statusEn: "In preparation",
+        descKo: "3D 프린트로 만든 육각기둥 형태의 연필꽂이 디자인으로, 한국 디자인출원을 준비하고 있습니다.",
+        descEn: "A 3D-printed pencil holder in a hexagonal prism form. Preparing a Korean design application."
+      },
+      {
+        titleKo: "공벌레 마우스",
+        titleEn: "Pill Bug Mouse",
+        statusKo: "출원 준비 중",
+        statusEn: "In preparation",
+        descKo: "분절된 갑각 형태를 가진 컴퓨터 마우스 디자인으로, 한국 디자인출원을 준비하고 있습니다.",
+        descEn: "A computer mouse design with a segmented carapace form. Preparing a Korean design application."
+      },
+      {
+        titleKo: "다빈치탱크 연필홀더",
+        titleEn: "Da Vinci Tank Pencil Holder",
+        statusKo: "출원 준비 중",
+        statusEn: "In preparation",
+        descKo: "탱크 형태를 모티프로 한 연필홀더 디자인으로, 한국 디자인출원을 준비하고 있습니다.",
+        descEn: "A pencil holder design with a tank-shaped motif. Preparing a Korean design application."
+      }
+    ],
+    violin: {
+      titleEn: "Violin",
+      titleKo: "바이올린 연주",
+      descEn: "Playing violin as an artistic counterbalance to algorithmic rigor.",
+      descKo: "알고리즘 탐색의 긴장감을 정리해주는 바이올린 연주 활동.",
+    },
+    hobbies: [
+      { ko: "폴리토피아 (플레이 · 모드 · 봇 제작)", en: "Polytopia (playing, modding, bot building)" },
+      { ko: "체스 엔진 제작", en: "Building a chess engine" },
+      { ko: "3D 모델링 (Tinkercad)", en: "3D modeling (Tinkercad)" }
+    ]
+  }
 };
 
 // Resolve an embedded image key (e.g. "butterfly") or pass through a normal URL
@@ -223,7 +267,7 @@ export default function App() {
   const [theme, setTheme] = useState("dark");
   const isDark = theme !== "light";
   const [lang, setLang] = useState("KO"); // "KO" | "EN"
-  const [activeTab, setActiveTab] = useState("home"); // home | problems | awards | projects | contact
+  const [activeTab, setActiveTab] = useState("home"); // home | problems | awards | projects | passions | contact
   
 
 
@@ -272,6 +316,7 @@ export default function App() {
                 { id: 'problems', label: isEn ? 'Problems' : '투고 문제' },
                 { id: 'awards', label: isEn ? 'Awards' : '수상 실적' },
                 { id: 'projects', label: isEn ? 'Projects' : '프로젝트' },
+                { id: 'passions', label: isEn ? 'Designs & Hobbies' : '디자인출원 & 취미' },
                 { id: 'contact', label: isEn ? 'Contact' : '연락처' }
               ].map((tab) => (
                 <button
@@ -601,6 +646,85 @@ export default function App() {
                 </div>
               ))}
             </div>
+          </div>
+        )}
+
+        {/* TAB 5: DESIGN FILINGS, VIOLIN & HOBBIES */}
+        {activeTab === 'passions' && (
+          <div className="space-y-8 animate-fadeIn">
+            <div className="space-y-1.5">
+              <h1 className={`text-3xl font-bold tracking-tight ${isDark ? 'text-slate-100' : 'text-slate-900'}`}>
+                {isEn ? "Design Filings, Violin & Interests" : "디자인 출원, 바이올린 & 관심 분야"}
+              </h1>
+              <p className={`text-sm ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
+                {isEn ? "Design application progress, violin performances, and personal interests." : "디자인 출원 진행 내역과 바이올린 연주, 관심 분야입니다."}
+              </p>
+            </div>
+
+            {/* Design filings */}
+            <div className="grid grid-cols-1 gap-4">
+              {data.passions.designs.map((d, i) => (
+                <div key={i} className={`p-6 rounded-2xl border space-y-3 ${
+                  isDark ? 'bg-slate-900/60 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
+                }`}>
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <h3 className={`text-lg font-bold ${isDark ? 'text-slate-100' : 'text-slate-900'}`}>
+                      {isEn ? d.titleEn : d.titleKo}
+                    </h3>
+                    <span className={`text-xs font-mono px-2 py-0.5 rounded border ${
+                      d.appNo
+                        ? (isDark ? 'bg-emerald-950 text-emerald-400 border-emerald-800' : 'bg-emerald-50 text-emerald-700 border-emerald-300')
+                        : (isDark ? 'bg-amber-950/80 text-amber-400 border-amber-800' : 'bg-amber-50 text-amber-700 border-amber-300')
+                    }`}>
+                      {isEn ? d.statusEn : d.statusKo}
+                    </span>
+                  </div>
+                  {(d.appNo || d.regNo) && (
+                    <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs font-mono text-slate-400">
+                      {d.appNo && <span>{isEn ? "Application No." : "출원번호"} {d.appNo}{d.appDate ? ` (${d.appDate})` : ""}</span>}
+                      {d.regNo && <span>{isEn ? "Registration No." : "등록번호"} {d.regNo}</span>}
+                    </div>
+                  )}
+                  <p className={`text-sm leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
+                    {isEn ? d.descEn : d.descKo}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Violin */}
+            <div className={`p-6 rounded-2xl border space-y-4 ${
+              isDark ? 'bg-slate-900/60 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
+            }`}>
+              <div className="space-y-1.5">
+                <h3 className={`text-lg font-bold ${isDark ? 'text-slate-100' : 'text-slate-900'}`}>
+                  {isEn ? data.passions.violin.titleEn : data.passions.violin.titleKo}
+                </h3>
+                <p className={`text-sm leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
+                  {isEn ? data.passions.violin.descEn : data.passions.violin.descKo}
+                </p>
+              </div>
+
+            </div>
+
+            {/* Interests */}
+            <div className={`p-6 rounded-2xl border space-y-3 ${
+              isDark ? 'bg-slate-900/40 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
+            }`}>
+              <h3 className={`text-sm font-bold font-mono ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>
+                {isEn ? "Interests" : "관심 분야"}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {data.passions.hobbies.map((hobby, idx) => (
+                  <span key={idx} className={`text-xs font-mono px-3 py-1.5 rounded-lg border ${
+                    isDark ? 'bg-slate-800/80 border-slate-700 text-slate-300' : 'bg-slate-100 border-slate-200 text-slate-700'
+                  }`}>
+                    {isEn ? hobby.en : hobby.ko}
+                  </span>
+                ))}
+              </div>
+            </div>
+
           </div>
         )}
 

@@ -4,10 +4,7 @@ module.exports = {
     extend: {
       // Single accent: the sky scale is replaced with indigo so every existing sky-* class picks up one restrained accent.
       colors: {
-        sky: {
-          50: "#eef2ff", 100: "#e0e7ff", 200: "#c7d2fe", 300: "#a5b4fc", 400: "#818cf8",
-          500: "#6366f1", 600: "#4f46e5", 700: "#4338ca", 800: "#3730a3", 900: "#312e81", 950: "#1e1b4b"
-        }
+        sky: { 50:"#f5f0ff",100:"#ebe0ff",200:"#d6c2ff",300:"#b595ff",400:"#9161f7",500:"#5e17eb",600:"#4d12c4",700:"#3d0ea0",800:"#2d0b7a",900:"#1f0854",950:"#12053a" }
       }
     }
   },

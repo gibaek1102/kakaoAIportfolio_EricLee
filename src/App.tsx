@@ -295,7 +295,7 @@ export default function App() {
               className="flex items-center gap-3 group text-left focus:outline-none"
             >
               {data.profile.avatarUrl && (
-                <img src={resolveImg(data.profile.avatarUrl)} alt={isEn ? "Profile photo" : "프로필 사진"} className="w-11 h-11 rounded-none object-cover border border-slate-700/60" />
+                <img src={resolveImg(data.profile.avatarUrl)} alt={isEn ? "Profile photo" : "프로필 사진"} className="w-11 h-11 rounded-full object-cover ring-1 ring-sky-500/30" />
               )}
               <div>
                 <span className={`font-bold text-sm tracking-wide block whitespace-nowrap group-hover:text-sky-400 transition ${

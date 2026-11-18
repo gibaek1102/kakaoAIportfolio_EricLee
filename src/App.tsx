@@ -230,9 +230,6 @@ const resolveImg = (keyOrUrl) => IMG[keyOrUrl] ?? keyOrUrl;
 const FLOAT_CSS = `
 @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
 .animate-fadeIn { animation: fadeIn 0.35s ease-out; }
-@keyframes waveMove { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-.aqua-wave { animation: waveMove 14s linear infinite; }
-@media (prefers-reduced-motion: reduce) { .aqua-wave { animation: none; } }
 `;
 
 // Age counter: calendar difference computed in KST (UTC+9) from 2011-11-02 07:56.
@@ -322,7 +319,7 @@ export default function App() {
       {isAqua && <style>{AQUA_CSS}</style>}
       {isAqua && (
         <div aria-hidden="true" className="pointer-events-none fixed inset-x-0 bottom-0 h-40 overflow-hidden" style={{ zIndex: 0, opacity: 0.28 }}>
-          <svg viewBox="0 0 2880 120" preserveAspectRatio="none" className="aqua-wave" style={{ width: "200%", height: "100%" }}>
+          <svg viewBox="0 0 2880 120" preserveAspectRatio="none" style={{ width: "100%", height: "100%" }}>
             <path fill="#22d3ee" d="M0,64 C180,110 360,20 540,64 C720,108 900,20 1080,64 C1260,108 1350,40 1440,64 C1620,110 1800,20 1980,64 C2160,108 2340,20 2520,64 C2700,108 2790,40 2880,64 L2880,120 L0,120 Z" />
           </svg>
         </div>
@@ -487,7 +484,7 @@ export default function App() {
 
               {/* Minimal Age Badge */}
               <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono tracking-tight border shadow-inner ${isDark ? 'bg-slate-900/40 text-sky-400 border-sky-900/50' : 'bg-white text-sky-700 border-sky-200'}`}>
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
                 <AgeCounter />
               </div>
 

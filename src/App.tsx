@@ -148,13 +148,13 @@ const INITIAL_DATA = {
   projects: [
     {
       id: "proj-chess",
-      titleEn: "Lunaris — NNUE Chess Engine",
-      titleKo: "Lunaris — NNUE 체스 엔진",
+      titleEn: "Terranion — NNUE Chess Engine",
+      titleKo: "Terranion — NNUE 체스 엔진",
       badge: "Standalone Site",
-      descEn: "A standalone web-based chess engine with a custom-trained NNUE evaluation function, communicating via the UCI protocol. You can play against it with six difficulty levels, watch it play itself, and download your games as PGN files.",
-      descKo: "직접 학습시킨 NNUE 평가 함수를 사용하고 UCI 프로토콜로 동작하는 웹 체스 엔진입니다. 난이도 6단계로 대국할 수 있고, 엔진끼리의 자기 대국을 관람하거나 기보를 PGN 파일로 내려받을 수 있습니다.",
-      liveUrl: "https://gibaek1102.github.io/Chessbot_Lunaris1.0/",
-      tech: ["NNUE", "UCI", "Self-Play", "PGN"]
+      descEn: "A web chess engine, Terranion 1.4, with an NNUE evaluation function I trained myself. You can play against it, choose your color, piece theme and engine think time, use undo, flip and resign, watch engines play each other, and download recent games as PGN files.",
+      descKo: "직접 학습시킨 NNUE 평가 함수를 쓰는 웹 체스 엔진 Terranion 1.4입니다. 색과 말 테마, 엔진 생각 시간을 정해 대국할 수 있고, 무르기·뒤집기·기권을 쓸 수 있습니다. 엔진끼리 두는 모습을 관람하거나 최근 기보를 PGN 파일로 내려받을 수 있습니다.",
+      liveUrl: "https://gibaek1102.github.io/chesstro/#play",
+            tech: ["NNUE", "UCI", "Self-Play", "PGN"]
     },
     {
       id: "proj-aitopia",

@@ -227,16 +227,12 @@ const INITIAL_DATA = {
 // Resolve an embedded image key (e.g. "butterfly") or pass through a normal URL
 const resolveImg = (keyOrUrl) => IMG[keyOrUrl] ?? keyOrUrl;
 
-// Gentle floating motion for the header butterfly (disabled for users who prefer reduced motion)
 const FLOAT_CSS = `
-@keyframes nabiFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
-.nabi-float { animation: nabiFloat 6s ease-in-out infinite; will-change: transform; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
 .animate-fadeIn { animation: fadeIn 0.35s ease-out; }
 @keyframes waveMove { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .aqua-wave { animation: waveMove 14s linear infinite; }
 @media (prefers-reduced-motion: reduce) { .aqua-wave { animation: none; } }
-@media (prefers-reduced-motion: reduce) { .nabi-float { animation: none; } }
 `;
 
 // Age counter: calendar difference computed in KST (UTC+9) from 2011-11-02 07:56.
@@ -353,7 +349,7 @@ export default function App() {
               onClick={handleAvatarClick}
               className="flex items-center gap-3 group text-left focus:outline-none"
             >
-              <div className="relative nabi-float">
+              <div className="relative">
                 {data.profile.avatarUrl ? (
                   <img 
                     src={resolveImg(data.profile.avatarUrl)}

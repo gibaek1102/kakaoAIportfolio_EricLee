@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { 
   Sun,
   Moon,
-  Mail,
   BookOpen,
   Zap,
   ArrowUpRight
@@ -21,7 +20,6 @@ const INITIAL_DATA = {
     heroSloganKo: "알고리즘을 공부하는 학생입니다.",
     bioEn: "I am Eric Lee (Gibaek Lee). I study olympiad mathematics and competitive programming. I am in charge of problem setting for the Daeshin High School Algorithm Contest 2026. The Chesstro chess site and the AItopia Polytopia bot research are built together with an AI tool (Claude).",
     bioKo: "이기백입니다. 올림피아드 수학과 경쟁 프로그래밍을 공부합니다. 대신고등학교 알고리즘 대회 2026의 문제 출제를 맡고 있습니다. 체스 사이트 Chesstro와 폴리토피아 봇 연구 AItopia는 AI 도구(Claude)와 함께 만들고 있습니다.",
-    email: "gibaek1102@gmail.com",
     github: "https://github.com/gibaek1102",
     solvedAc: "https://solved.ac/profile/gibaek1102",
     dojUser: "https://doj.kr/ko/user/ericlee",
@@ -81,8 +79,8 @@ const INITIAL_DATA = {
       titleEn: "KOI 1st Round Gold (Overall & Regional) & 2nd Round Bronze",
       titleKo: "제43회 한국정보올림피아드(KOI) 1차 중등부 전체부문 금상 · 지역부문 금상 & 2차 동상",
       org: "한국정보올림피아드위원회",
-      detailsKo: "1차 대회 중등부 전체부문 금상 및 지역부문(부산/대구/울산/경북/경남/강원) 금상 (2026.05.26 수여). 2차 동상, NYPC Bronze Award.",
-      detailsEn: "43rd KOI 1st Round, Middle School Division: Gold in both the Overall and Regional (Busan/Daegu/Ulsan/Gyeongbuk/Gyeongnam/Gangwon) categories (awarded 2026-05-26). 2nd Round Bronze, NYPC Bronze Award.",
+      detailsKo: "1차 대회 중등부 전체부문 금상 및 지역부문 금상. 2차 동상, NYPC Bronze Award.",
+      detailsEn: "43rd KOI 1st Round, Middle School Division: Gold in both the Overall and Regional categories. 2nd Round Bronze, NYPC Bronze Award.",
       images: [
         { key: "koi43_overall", labelKo: "제43회 KOI 1차 전체부문 금상", labelEn: "43rd KOI 1st Round — Overall Gold" },
         { key: "koi43_regional", labelKo: "제43회 KOI 1차 지역부문 금상", labelEn: "43rd KOI 1st Round — Regional Gold" }
@@ -101,8 +99,8 @@ const INITIAL_DATA = {
       titleEn: "KOI 1st Round Bronze & 2nd Round Silver",
       titleKo: "제41회 한국정보올림피아드(KOI) 1차 동상 & 2차 은상",
       org: "한국정보올림피아드위원회",
-      detailsKo: "1차 중등부 전체부문 동상 · 지역부문 동상 (2024.05.28 수여). 2차 은상.",
-      detailsEn: "41st KOI 1st Round, Middle School Division: Bronze in both Overall and Regional categories (2024-05-28). 2nd Round Silver.",
+      detailsKo: "1차 중등부 전체부문 동상 · 지역부문 동상. 2차 은상.",
+      detailsEn: "41st KOI 1st Round, Middle School Division: Bronze in both Overall and Regional categories. 2nd Round Silver.",
       images: [
         { key: "koi41_overall", labelKo: "제41회 KOI 1차 전체부문 동상", labelEn: "41st KOI 1st Round — Overall Bronze" },
         { key: "koi41_regional", labelKo: "제41회 KOI 1차 지역부문 동상", labelEn: "41st KOI 1st Round — Regional Bronze" }
@@ -113,8 +111,8 @@ const INITIAL_DATA = {
       titleEn: "KPS Physics Contest — Beginner Course Excellence Award",
       titleKo: "2024 제2회 물리대회 초급과정 우수상",
       org: "사단법인 한국물리학회",
-      detailsKo: "초급과정 우수상 및 인증등급 '으뜸' (2024.08.31 응시, 2024.09.30 수여).",
-      detailsEn: "2nd Physics Contest 2024, Beginner Course: Excellence Award and certification grade 'Top' (taken 2024-08-31, awarded 2024-09-30).",
+      detailsKo: "초급과정 우수상 및 인증등급 '으뜸'.",
+      detailsEn: "2nd Physics Contest 2024, Beginner Course: Excellence Award and certification grade 'Top'.",
       images: [
         { key: "kps_prize", labelKo: "물리대회 초급과정 우수상", labelEn: "Beginner Course Excellence Award" },
         { key: "kps_cert", labelKo: "인증서 (초급과정 으뜸)", labelEn: "Certification (Beginner 'Top' grade)" }
@@ -125,8 +123,8 @@ const INITIAL_DATA = {
       titleEn: "49th KMC — 86/100, Grade 1-B",
       titleKo: "제49회 한국수학인증시험(KMC) 86점 · 1등급 B",
       org: "한국수학교육학회",
-      detailsKo: "2024 후기(11.10 시행), 중등 1학년 응시. 86점 · 1등급 B · 백분위 80.78 (전국 평균 64.29).",
-      detailsEn: "2024 second half (taken 11.10) as a 7th grader. 86/100, Grade 1-B, 80.78th percentile (national average 64.29).",
+      detailsKo: "2024 후기. 86점 · 1등급 B.",
+      detailsEn: "2024 second half. 86/100, Grade 1-B.",
       images: [
         { key: "kmc49", labelKo: "제49회 KMC 성적표", labelEn: "49th KMC Score Report" }
       ]
@@ -136,8 +134,8 @@ const INITIAL_DATA = {
       titleEn: "KOI 1st Round Regional Bronze & 2nd Round Silver (12th Overall)",
       titleKo: "제40회 한국정보올림피아드(KOI) 1차 지역 동상 & 2차 초등부 은상",
       org: "한국정보올림피아드위원회",
-      detailsKo: "KOI 1차 초등부 지역부문 동상 (2023.05.14). 2차 초등부 은상 (270점, 전체 12위, 상위 7.36%).",
-      detailsEn: "KOI 1st Round Regional Bronze, Elementary Division (2023-05-14). 2nd Round Silver, Elementary Division (270 points, 12th overall, top 7.36%).",
+      detailsKo: "KOI 1차 초등부 지역부문 동상. 2차 초등부 은상 (270점, 전체 12위).",
+      detailsEn: "KOI 1st Round Regional Bronze, Elementary Division. 2nd Round Silver, Elementary Division (270 points, 12th overall).",
       images: [
         { key: "koi40_regional", labelKo: "제40회 KOI 1차 초등부 지역부문 동상", labelEn: "40th KOI 1st Round — Regional Bronze" },
         { key: "koi40_round2", labelKo: "2023년도 2차 대회 결과 (은상, 상위 7.36%)", labelEn: "2023 2nd Round Result (Silver, top 7.36%)" }
@@ -606,29 +604,13 @@ export default function App() {
             <div className="text-center space-y-2">
               <h1 className={`text-3xl font-bold tracking-tight ${isDark ? 'text-slate-100' : 'text-slate-900'}`}>Contact & Profiles</h1>
               <p className={`text-sm ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
-                {isEn ? "Connect via email or algorithm judge profiles." : "이메일 및 알고리즘 저지 프로필 링크입니다."}
+                {isEn ? "Algorithm judge profiles." : "알고리즘 저지 프로필 링크입니다."}
               </p>
             </div>
 
             <div className={`border rounded-none p-6 sm:p-8 space-y-4 ${
               isDark ? 'bg-slate-900/60 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
             }`}>
-              {/* Email */}
-              <a 
-                href={`mailto:${data.profile.email}`}
-                className={`flex items-center gap-4 p-4 rounded-none border transition group ${
-                  isDark ? 'bg-slate-800/50 hover:bg-slate-800 border-slate-700/50' : 'bg-slate-50 hover:bg-slate-100 border-slate-200'
-                }`}
-              >
-                <div className={`p-3 rounded-none transition ${isDark ? 'bg-sky-950/80 text-sky-400' : 'bg-sky-50 text-sky-700'} group-hover:bg-sky-500 group-hover:text-slate-950`}>
-                  <Mail className="w-6 h-6" />
-                </div>
-                <div>
-                  <div className="text-xs text-slate-400 font-mono">Email</div>
-                  <div className={`font-semibold font-mono ${isDark ? 'text-slate-100' : 'text-slate-900'}`}>{data.profile.email}</div>
-                </div>
-              </a>
-
               {/* Solved.ac */}
               <a 
                 href={data.profile.solvedAc}

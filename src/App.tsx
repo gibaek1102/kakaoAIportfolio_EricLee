@@ -30,36 +30,36 @@ const INITIAL_DATA = {
   principles: [
     {
       num: "01",
-      titleEn: "1. Hide structure within the problem; leave discovery to the solver",
-      titleKo: "1. 구조는 문제 안에 숨기고, 발견은 풀이자의 몫으로 둔다.",
+      titleEn: "Hide structure within the problem; leave discovery to the solver",
+      titleKo: "구조는 문제 안에 숨기고, 발견은 풀이자의 몫으로 둔다",
       descEn: "When I set a problem, I do not write the key structure of the solution in the statement. I design it so that solvers find that structure on their own.",
       descKo: "문제문에는 풀이의 핵심 구조를 쓰지 않습니다. 풀이자가 그 구조를 직접 찾도록 설계합니다.",
     },
     {
       num: "02",
-      titleEn: "2. Verify before believing",
-      titleKo: "2. 믿기 전에 직접 돌려보고 검증한다.",
+      titleEn: "Verify before believing",
+      titleKo: "믿기 전에 직접 돌려보고 검증한다",
       descEn: "Every problem I set is checked with random stress tests and variant solutions I implement myself, to catch counterexamples and corner cases.",
       descKo: "출제한 문제는 무작위 스트레스 테스트와 직접 구현한 변형 풀이로 반례와 코너 케이스를 검증합니다.",
     },
     {
       num: "03",
-      titleEn: "3. Advance theory and implementation together",
-      titleKo: "3. 이론과 구현을 같이 간다.",
+      titleEn: "Advance theory and implementation together",
+      titleKo: "이론과 구현을 같이 간다",
       descEn: "Building self-play reinforcement learning infrastructure for a Polytopia bot while continuously exploring mathematical problem structures.",
       descKo: "수학적·알고리즘적 구조를 파고들면서, 폴리토피아 봇의 자기 대국 강화학습 인프라를 직접 쌓고 있습니다.",
     },
     {
       num: "04",
-      titleEn: "4. Balance the overall contest lineup",
-      titleKo: "4. 대회 전체의 균형을 본다.",
+      titleEn: "Balance the overall contest lineup",
+      titleKo: "대회 전체의 균형을 본다",
       descEn: "Across the lineup, I check whether problem types (ad hoc, interactive, constructive, output-only, etc.) are mixed evenly, not just whether each problem is good.",
       descKo: "문제 하나보다 라인업 전체에서 문제 유형(애드혹, 대화형, 구성형, 출력 전용 등)이 고르게 섞였는지 봅니다.",
     },
     {
       num: "05",
-      titleEn: "5. Seek facts, not the feeling of success",
-      titleKo: "5. 기분이 아니라 사실을 얻는다.",
+      titleEn: "Seek facts, not the feeling of success",
+      titleKo: "기분이 아니라 사실을 얻는다",
       descEn: "I value learning what is actually true over feeling successful. The AItopia research notes record failed attempts alongside pre-set criteria, and I did not change the criteria after seeing results.",
       descKo: "기분보다 참인 사실을 알아내는 쪽이 중요하다고 봅니다. AItopia 연구 노트에는 실패한 시도까지 사전 기준과 함께 적었고, 결과를 보고 기준을 바꾸지 않았습니다.",
     }
@@ -337,7 +337,7 @@ export default function App() {
             {/* Hero Section */}
             <div className="space-y-4">
 
-              <h1 className={`text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight ${
+              <h1 className={`text-3xl sm:text-4xl font-bold tracking-tight leading-tight ${
                 isDark ? 'text-slate-100' : 'text-slate-900'
               }`}>
                 {isEn ? data.profile.heroSloganEn : data.profile.heroSloganKo}

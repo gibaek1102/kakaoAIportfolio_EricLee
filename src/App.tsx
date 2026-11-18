@@ -17,9 +17,9 @@ const INITIAL_DATA = {
     roleEn: "Competitive Programming · Olympiad Mathematics",
     roleKo: "경쟁 프로그래밍 · 수학 올림피아드",
     avatarUrl: "wave", // key into the embedded IMG table at the bottom of this file (or any normal URL)
-    heroSloganEn: "Exploring Olympiad Math & Competitive Programming. Designing algorithmic problems and building intelligent systems.",
+    heroSloganEn: "I study olympiad mathematics and competitive programming. I write problems for high school algorithm contests and build chess engines and bots.",
     heroSloganKo: "경쟁 수학과 알고리즘을 공부합니다. 고등학생 알고리즘 대회 문제를 출제하고, 체스 엔진과 봇을 직접 만듭니다.",
-    bioEn: "Hi, I'm Eric Lee (Gibaek Lee). I study Olympiad Mathematics and Competitive Programming (CP), and serve as a problem setter for high school algorithm contests, including Daeshin High School Algorithm Contest 2026. Alongside problem setting, I implement projects like custom chess engines and autonomous Polytopia bots.",
+    bioEn: "I am Eric Lee (Gibaek Lee). I study olympiad mathematics and competitive programming. I am in charge of problem setting for the Daeshin High School Algorithm Contest 2026. I also build projects myself, including the Chesstro chess site and the AItopia Polytopia bot.",
     bioKo: "이기백입니다. 올림피아드 수학과 경쟁 프로그래밍을 공부합니다. 대신고등학교 알고리즘 대회 2026의 문제 출제를 맡고 있습니다. 체스 엔진 Chesstro와 폴리토피아 봇 AItopia도 직접 만들고 있습니다.",
     email: "gibaek1102@gmail.com",
     github: "https://github.com/gibaek1102",
@@ -32,14 +32,14 @@ const INITIAL_DATA = {
       num: "01",
       titleEn: "1. Hide structure within the problem; leave discovery to the solver",
       titleKo: "1. 구조는 문제 안에 숨기고, 발견은 풀이자의 몫으로 둔다.",
-      descEn: "When setting a problem, I do not state the key structure of the solution in the statement. I design it so that solvers find that structure on their own.",
+      descEn: "When I set a problem, I do not write the key structure of the solution in the statement. I design it so that solvers find that structure on their own.",
       descKo: "문제문에는 풀이의 핵심 구조를 쓰지 않습니다. 풀이자가 그 구조를 직접 찾도록 설계합니다.",
     },
     {
       num: "02",
       titleEn: "2. Verify before believing",
       titleKo: "2. 믿기 전에 직접 돌려보고 검증한다.",
-      descEn: "Every problem I set is checked with large numbers of random stress tests and variant solutions I implement myself, to catch counterexamples and corner cases.",
+      descEn: "Every problem I set is checked with random stress tests and variant solutions I implement myself, to catch counterexamples and corner cases.",
       descKo: "출제한 문제는 무작위 스트레스 테스트와 직접 구현한 변형 풀이로 반례와 코너 케이스를 검증합니다.",
     },
     {
@@ -53,14 +53,14 @@ const INITIAL_DATA = {
       num: "04",
       titleEn: "4. Balance the overall contest lineup",
       titleKo: "4. 대회 전체의 균형을 본다.",
-      descEn: "Prioritizing a balanced mix of problem types across the lineup—Ad-hoc, Interactive, Constructive, Output-Only—rather than focusing solely on isolated problems.",
+      descEn: "Across the lineup, I check whether problem types (ad hoc, interactive, constructive, output-only, etc.) are mixed evenly, not just whether each problem is good.",
       descKo: "문제 하나보다 라인업 전체에서 문제 유형(애드혹, 대화형, 구성형, 출력 전용 등)이 고르게 섞였는지 봅니다.",
     },
     {
       num: "05",
       titleEn: "5. Seek facts, not the feeling of success",
       titleKo: "5. 기분이 아니라 사실을 얻는다.",
-      descEn: "I would rather learn what is actually true than feel that I succeeded. So the AItopia research notes record failed attempts too, with criteria set before seeing results and never changed afterwards.",
+      descEn: "I value learning what is actually true over feeling successful. The AItopia research notes record failed attempts alongside pre-set criteria, and I did not change the criteria after seeing results.",
       descKo: "기분보다 참인 사실을 알아내는 쪽이 중요하다고 봅니다. AItopia 연구 노트에는 실패한 시도까지 사전 기준과 함께 적었고, 결과를 보고 기준을 바꾸지 않았습니다.",
     }
   ],
@@ -71,7 +71,7 @@ const INITIAL_DATA = {
       title: "남미예선",
       url: "https://doj.kr/ko/problems/482",
       type: "Competitive Programming",
-      descEn: "A competitive programming problem submitted to DOJ platform under the South American qualification problem set.",
+      descEn: "A competitive programming problem submitted to DOJ under the South American qualifier problem set.",
       descKo: "DOJ 플랫폼에 출제·투고한 남미예선 카테고리 알고리즘 문제입니다.",
     }
   ],
@@ -150,7 +150,7 @@ const INITIAL_DATA = {
       titleEn: "Chesstro — Web Chess with the Terranion 1.4 Engine",
       titleKo: "Chesstro — Terranion 1.4 엔진 웹 체스",
       badge: "Standalone Site",
-      descEn: "A web chess engine, Terranion 1.4, with an NNUE evaluation function I trained myself. You can play against it, choose your color, piece theme and engine think time, use undo, flip and resign, watch engines play each other, and download recent games as PGN files.",
+      descEn: "A web chess site with an NNUE evaluation I trained myself. The engine is Terranion 1.4. You can choose color, piece theme and engine think time, use undo, flip and resign, watch engines play each other, and download recent games as PGN.",
       descKo: "직접 학습시킨 NNUE 평가 함수를 쓰는 웹 체스입니다. 엔진은 Terranion 1.4입니다. 색, 말 테마, 생각 시간을 정하고 무르기·뒤집기·기권을 쓸 수 있습니다. 엔진끼리 두는 대국을 보고 최근 기보를 PGN으로 받을 수 있습니다.",
       liveUrl: "https://gibaek1102.github.io/chesstro/#play",
             tech: ["NNUE", "UCI", "Self-Play", "PGN"]
@@ -161,7 +161,7 @@ const INITIAL_DATA = {
       titleKo: "AItopia — 자기 대국 강화학습 봇 연구",
       badge: "Research · 관전·분석 데모",
       liveUrl: "https://gibaek1102.github.io/AItopia/",
-      descEn: "Research on self-play reinforcement learning bots for a turn-based strategy game. A bot-vs-bot spectator and a next-move analysis tool run in the browser; no mode where a person plays is published. The research-notes site records structure and results as they are, failed attempts included: the learned bot beats the built-in hard bot (about 59-67%) but loses clearly to the strongest comparison bot (about 16-17%). Round 1 closed on 2026-11-08 and round 2 is in progress. NOT AN OFFICIAL Polytopia PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MIDJIWAN.",
+      descEn: "Self-play reinforcement learning research on a Polytopia bot. A bot-vs-bot spectator and a next-move analysis tool run in the browser; no mode where a person plays is published. The research notes record failed attempts as they happened. Round 1 closed on 2026-11-08 and round 2 is in progress. NOT AN OFFICIAL Polytopia PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MIDJIWAN.",
       descKo: "폴리토피아 봇을 대상으로 한 자기 대국 강화학습 연구입니다. 관전 도구와 다음 수 분석 도구를 브라우저에서 실행할 수 있습니다. 사람과 대국하는 모드는 공개하지 않습니다. 연구 노트에 실패한 시도까지 기록했고, 1차 연구는 2026-11-08에 종료했으며 2차가 진행 중입니다. NOT AN OFFICIAL Polytopia PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MIDJIWAN.",
       tech: ["Python", "PyTorch", "Reinforcement Learning"]
     },
@@ -171,7 +171,7 @@ const INITIAL_DATA = {
       titleKo: "Calculator 1.0 — 알고리즘 기능을 내장한 데스크톱 계산기",
       badge: "Desktop App",
       download: "calculator",
-      descEn: "A desktop calculator built with Python and Tkinter. Beyond trigonometry (DEG/RAD toggle), logarithms, factorials and GCD/LCM, it computes LIS (length, sequence and count in O(n log n)) and the Josephus problem (survivor and elimination order) with a single button. The calculation engine is separated from the GUI, and it ships with 10 color themes plus saving of custom themes. Download the source (.py) below and run it with Python 3.",
+      descEn: "A desktop calculator built with Python and Tkinter. Besides trigonometry (DEG/RAD toggle), logarithms, factorials and GCD/LCM, it computes LIS (O(n log n)) and the Josephus problem with one button. The calculation engine is separate from the GUI. It has 10 color themes and lets you save custom themes. Download the source (.py) below and run it with Python 3.",
       descKo: "Python과 Tkinter로 만든 데스크톱 계산기입니다. 삼각함수(DEG/RAD 전환), 로그, 팩토리얼, GCD/LCM 같은 일반 기능과 함께 LIS(O(n log n))와 요세푸스 계산을 버튼 하나로 제공합니다. 계산 엔진과 화면을 분리했고, 10가지 색상 테마와 직접 만든 테마 저장 기능이 있습니다. 아래 버튼으로 소스(.py)를 내려받아 실행할 수 있습니다 (Python 3 필요).",
       // liveUrl / githubUrl은 있을 때만 버튼이 나옵니다. 저장소를 올리면 githubUrl을 추가하세요.
       tech: ["Python", "Tkinter", "LIS", "Josephus"]

@@ -33,35 +33,35 @@ const INITIAL_DATA = {
       titleEn: "1. Hide structure within the problem; leave discovery to the solver",
       titleKo: "1. 구조는 문제 안에 숨기고, 발견은 풀이자의 몫으로 둔다.",
       descEn: "When setting a problem, I do not state the key structure of the solution in the statement. I design it so that solvers find that structure on their own.",
-      descKo: "문제를 낼 때 풀이의 핵심 구조를 문제문에 직접 쓰지 않고, 풀이자가 스스로 그 구조를 찾아내도록 설계합니다."
+      descKo: "문제문에는 풀이의 핵심 구조를 쓰지 않습니다. 풀이자가 그 구조를 직접 찾도록 설계합니다.",
     },
     {
       num: "02",
       titleEn: "2. Verify before believing",
       titleKo: "2. 믿기 전에 직접 돌려보고 검증한다.",
       descEn: "Every problem I set is checked with large numbers of random stress tests and variant solutions I implement myself, to catch counterexamples and corner cases.",
-      descKo: "출제한 문제는 대량의 무작위 스트레스 테스트와 직접 구현한 변형 풀이로 반례와 코너 케이스를 검증합니다."
+      descKo: "출제한 문제는 무작위 스트레스 테스트와 직접 구현한 변형 풀이로 반례와 코너 케이스를 검증합니다.",
     },
     {
       num: "03",
       titleEn: "3. Advance theory and implementation together",
       titleKo: "3. 이론과 구현을 같이 간다.",
-      descEn: "Self-play reinforcement learning research for a Polytopia bot.",
-      descKo: "폴리토피아 봇의 자기 대국 강화학습을 연구하고 있습니다."
+      descEn: "Building self-play reinforcement learning infrastructure for a Polytopia bot while continuously exploring mathematical problem structures.",
+      descKo: "수학적·알고리즘적 구조를 파고들면서, 폴리토피아 봇의 자기 대국 강화학습 인프라를 직접 쌓고 있습니다.",
     },
     {
       num: "04",
       titleEn: "4. Balance the overall contest lineup",
       titleKo: "4. 대회 전체의 균형을 본다.",
       descEn: "Prioritizing a balanced mix of problem types across the lineup—Ad-hoc, Interactive, Constructive, Output-Only—rather than focusing solely on isolated problems.",
-      descKo: "문제 하나보다 라인업 전체에서 문제 유형(애드혹, 대화형, 구성형, 출력 전용 등)이 고르게 섞이는지를 따집니다."
+      descKo: "문제 하나보다 라인업 전체에서 문제 유형(애드혹, 대화형, 구성형, 출력 전용 등)이 고르게 섞였는지 봅니다.",
     },
     {
       num: "05",
       titleEn: "5. Seek facts, not the feeling of success",
       titleKo: "5. 기분이 아니라 사실을 얻는다.",
       descEn: "I would rather learn what is actually true than feel that I succeeded. So the AItopia research notes record failed attempts too, with criteria set before seeing results and never changed afterwards.",
-      descKo: "성공했다는 기분보다 실제로 참인 것을 알아내는 쪽이 더 중요하다고 생각합니다. 그래서 AItopia 연구 노트에는 실패한 시도까지 사전 기준과 함께 그대로 적었고, 결과를 보고 기준을 바꾸지 않았습니다."
+      descKo: "기분보다 참인 사실을 알아내는 쪽이 중요하다고 봅니다. AItopia 연구 노트에는 실패한 시도까지 사전 기준과 함께 적었고, 결과를 보고 기준을 바꾸지 않았습니다.",
     }
   ],
   problems: [
@@ -72,7 +72,7 @@ const INITIAL_DATA = {
       url: "https://doj.kr/ko/problems/482",
       type: "Competitive Programming",
       descEn: "A competitive programming problem submitted to DOJ platform under the South American qualification problem set.",
-      descKo: "DOJ 플랫폼을 통해 출제/투고한 남미예선 카테고리의 알고리즘 문제."
+      descKo: "DOJ 플랫폼에 출제·투고한 남미예선 카테고리 알고리즘 문제입니다.",
     }
   ],
   awards: [
@@ -151,7 +151,7 @@ const INITIAL_DATA = {
       titleKo: "Chesstro — Terranion 1.4 엔진 웹 체스",
       badge: "Standalone Site",
       descEn: "A web chess engine, Terranion 1.4, with an NNUE evaluation function I trained myself. You can play against it, choose your color, piece theme and engine think time, use undo, flip and resign, watch engines play each other, and download recent games as PGN files.",
-      descKo: "직접 학습시킨 NNUE 평가 함수를 쓰는 웹 체스 엔진 Terranion 1.4입니다. 색과 말 테마, 엔진 생각 시간을 정해 대국할 수 있고, 무르기·뒤집기·기권을 쓸 수 있습니다. 엔진끼리 두는 모습을 관람하거나 최근 기보를 PGN 파일로 내려받을 수 있습니다.",
+      descKo: "직접 학습시킨 NNUE 평가 함수를 쓰는 웹 체스입니다. 엔진은 Terranion 1.4입니다. 색, 말 테마, 생각 시간을 정하고 무르기·뒤집기·기권을 쓸 수 있습니다. 엔진끼리 두는 대국을 보고 최근 기보를 PGN으로 받을 수 있습니다.",
       liveUrl: "https://gibaek1102.github.io/chesstro/#play",
             tech: ["NNUE", "UCI", "Self-Play", "PGN"]
     },
@@ -162,7 +162,7 @@ const INITIAL_DATA = {
       badge: "Research · 관전·분석 데모",
       liveUrl: "https://gibaek1102.github.io/AItopia/",
       descEn: "Research on self-play reinforcement learning bots for a turn-based strategy game. A bot-vs-bot spectator and a next-move analysis tool run in the browser; no mode where a person plays is published. The research-notes site records structure and results as they are, failed attempts included: the learned bot beats the built-in hard bot (about 59-67%) but loses clearly to the strongest comparison bot (about 16-17%). Round 1 closed on 2026-11-08 and round 2 is in progress. NOT AN OFFICIAL Polytopia PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MIDJIWAN.",
-      descKo: "턴제 전략 게임을 대상으로 한 자기 대국 강화학습 봇 연구입니다. 봇 대 봇 관전 도구와 다음 수 분석 도구를 브라우저에서 실행할 수 있으며, 사람이 직접 플레이하는 모드는 공개하지 않습니다. 연구 노트 사이트에 구조와 결과를 실패한 시도까지 있는 그대로 기록했습니다. 학습한 봇은 엔진 내장 hard 봇을 약 59~67% 이기지만 가장 강한 비교 봇에는 약 16~17%로 크게 집니다. 1차 연구는 2026-11-08에 종료했고 2차가 진행 중입니다. NOT AN OFFICIAL Polytopia PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MIDJIWAN.",
+      descKo: "폴리토피아 봇을 대상으로 한 자기 대국 강화학습 연구입니다. 관전 도구와 다음 수 분석 도구를 브라우저에서 실행할 수 있습니다. 사람과 대국하는 모드는 공개하지 않습니다. 연구 노트에 실패한 시도까지 기록했고, 1차 연구는 2026-11-08에 종료했으며 2차가 진행 중입니다. NOT AN OFFICIAL Polytopia PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MIDJIWAN.",
       tech: ["Python", "PyTorch", "Reinforcement Learning"]
     },
     {
@@ -172,7 +172,7 @@ const INITIAL_DATA = {
       badge: "Desktop App",
       download: "calculator",
       descEn: "A desktop calculator built with Python and Tkinter. Beyond trigonometry (DEG/RAD toggle), logarithms, factorials and GCD/LCM, it computes LIS (length, sequence and count in O(n log n)) and the Josephus problem (survivor and elimination order) with a single button. The calculation engine is separated from the GUI, and it ships with 10 color themes plus saving of custom themes. Download the source (.py) below and run it with Python 3.",
-      descKo: "Python과 Tkinter로 만든 데스크톱 계산기입니다. 삼각함수(DEG/RAD 전환), 로그, 팩토리얼, GCD/LCM 같은 일반 기능에 더해, LIS(길이·수열·개수를 O(n log n)으로)와 요세푸스(생존자·제거 순서)를 버튼 하나로 계산합니다. 계산 엔진과 화면을 분리했고, 10가지 색상 테마와 직접 만든 테마 저장 기능이 있습니다. 아래 버튼으로 소스(.py)를 내려받아 실행할 수 있습니다 (Python 3 필요).",
+      descKo: "Python과 Tkinter로 만든 데스크톱 계산기입니다. 삼각함수(DEG/RAD 전환), 로그, 팩토리얼, GCD/LCM 같은 일반 기능과 함께 LIS(O(n log n))와 요세푸스 계산을 버튼 하나로 제공합니다. 계산 엔진과 화면을 분리했고, 10가지 색상 테마와 직접 만든 테마 저장 기능이 있습니다. 아래 버튼으로 소스(.py)를 내려받아 실행할 수 있습니다 (Python 3 필요).",
       // liveUrl / githubUrl은 있을 때만 버튼이 나옵니다. 저장소를 올리면 githubUrl을 추가하세요.
       tech: ["Python", "Tkinter", "LIS", "Josephus"]
     }

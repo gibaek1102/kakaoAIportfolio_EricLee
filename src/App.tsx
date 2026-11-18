@@ -182,10 +182,7 @@ const INITIAL_DATA = {
 // Resolve an embedded image key (e.g. "butterfly") or pass through a normal URL
 const resolveImg = (keyOrUrl) => IMG[keyOrUrl] ?? keyOrUrl;
 
-const FLOAT_CSS = `
-@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
-.animate-fadeIn { animation: fadeIn 0.35s ease-out; }
-`;
+const FLOAT_CSS = ``;
 
 // Age counter: calendar difference computed in KST (UTC+9) from 2011-11-02 07:56.
 const BIRTH_KST_MS = Date.UTC(2011, 10, 2, 7, 56) - 9 * 3600 * 1000;
@@ -335,7 +332,7 @@ export default function App() {
 
         {/* TAB 1: HOME (ABOUT & STATEMENT) */}
         {activeTab === 'home' && (
-          <div className="space-y-12 animate-fadeIn">
+          <div className="space-y-12">
             
             {/* Hero Section */}
             <div className="space-y-4">
@@ -410,7 +407,7 @@ export default function App() {
 
         {/* TAB 2: SUBMITTED PROBLEMS */}
         {activeTab === 'problems' && (
-          <div className="space-y-8 animate-fadeIn">
+          <div className="space-y-8">
             <div className="space-y-1.5">
               <h1 className={`text-3xl font-bold tracking-tight ${isDark ? 'text-slate-100' : 'text-slate-900'}`}>
                 {isEn ? "Submitted Problems" : "내가 투고한 문제"}
@@ -459,7 +456,7 @@ export default function App() {
 
         {/* TAB 3: AWARDS */}
         {activeTab === 'awards' && (
-          <div className="space-y-8 animate-fadeIn">
+          <div className="space-y-8">
             <div className="space-y-1.5">
               <h1 className={`text-3xl font-bold tracking-tight ${isDark ? 'text-slate-100' : 'text-slate-900'}`}>
                 {isEn ? "Awards & Honors" : "수상 실적"}
@@ -520,7 +517,7 @@ export default function App() {
 
         {/* TAB 4: PROJECTS */}
         {activeTab === 'projects' && (
-          <div className="space-y-8 animate-fadeIn">
+          <div className="space-y-8">
             <div className="space-y-1.5">
               <h1 className={`text-3xl font-bold tracking-tight ${isDark ? 'text-slate-100' : 'text-slate-900'}`}>
                 {isEn ? "Projects" : "프로젝트"}
@@ -605,7 +602,7 @@ export default function App() {
 
         {/* TAB 6: CONTACT */}
         {activeTab === 'contact' && (
-          <div className="space-y-8 animate-fadeIn max-w-2xl mx-auto pt-2">
+          <div className="space-y-8 max-w-2xl mx-auto pt-2">
             <div className="text-center space-y-2">
               <h1 className={`text-3xl font-bold tracking-tight ${isDark ? 'text-slate-100' : 'text-slate-900'}`}>Contact & Profiles</h1>
               <p className={`text-sm ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>

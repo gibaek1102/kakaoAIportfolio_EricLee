@@ -157,8 +157,8 @@ const INITIAL_DATA = {
     },
     {
       id: "proj-aitopia",
-      titleEn: "AItopia (Solaris) — Self-Play RL Bot Research",
-      titleKo: "AItopia (솔라리스) — 자기 대국 강화학습 봇 연구",
+      titleEn: "AItopia — Self-Play RL Bot Research",
+      titleKo: "AItopia — 자기 대국 강화학습 봇 연구",
       badge: "Research · 관전·분석 데모",
       liveUrl: "https://gibaek1102.github.io/AItopia/",
       descEn: "Research on self-play reinforcement learning bots for a turn-based strategy game. A bot-vs-bot spectator and a next-move analysis tool run in the browser; no mode where a person plays is published. The research-notes site records structure and results as they are, failed attempts included: the learned bot beats the built-in hard bot (about 59-67%) but loses clearly to the strongest comparison bot (about 16-17%). Round 1 closed on 2026-11-08 and round 2 is in progress. NOT AN OFFICIAL Polytopia PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MIDJIWAN.",

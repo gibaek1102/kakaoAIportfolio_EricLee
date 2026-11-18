@@ -147,8 +147,8 @@ const INITIAL_DATA = {
   projects: [
     {
       id: "proj-chess",
-      titleEn: "Chesstro — Web Chess with the Terranion 1.4 Engine",
-      titleKo: "Chesstro — Terranion 1.4 엔진 웹 체스",
+      titleEn: "Chesstro — Web Chess",
+      titleKo: "Chesstro — 웹 체스",
       badge: "Standalone Site",
       descEn: "A web chess site with an NNUE evaluation. The engine is Terranion 1.4. You can choose color, piece theme and engine think time, use undo, flip and resign, watch engines play each other, and download recent games as PGN.",
       descKo: "NNUE 평가 함수를 쓰는 웹 체스입니다. 엔진은 Terranion 1.4입니다. 색, 말 테마, 생각 시간을 정하고 무르기·뒤집기·기권을 쓸 수 있습니다. 엔진끼리 두는 대국을 보고 최근 기보를 PGN으로 받을 수 있습니다.",

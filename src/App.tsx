@@ -14,8 +14,8 @@ const INITIAL_DATA = {
     nickname: "gibaek1102",
     nameEn: "Eric Lee",
     nameKo: "이기백",
-    roleEn: "Competitive Programming & Mathematics Explorer",
-    roleKo: "경쟁 프로그래밍 & 수학 탐구자",
+    roleEn: "Competitive Programming · Olympiad Mathematics",
+    roleKo: "경쟁 프로그래밍 · 수학 올림피아드",
     avatarUrl: "wave", // key into the embedded IMG table at the bottom of this file (or any normal URL)
     heroSloganEn: "Exploring Olympiad Math & Competitive Programming. Designing algorithmic problems and building intelligent systems.",
     heroSloganKo: "올림피아드 수학과 경쟁 알고리즘을 공부하고 있으며, 고등학생 알고리즘 대회 문제 출제와 체스 엔진, 봇 프로젝트를 진행하고 있습니다.",
@@ -176,51 +176,7 @@ const INITIAL_DATA = {
       // liveUrl / githubUrl은 있을 때만 버튼이 나옵니다. 저장소를 올리면 githubUrl을 추가하세요.
       tech: ["Python", "Tkinter", "LIS", "Josephus"]
     }
-  ],
-  passions: {
-    // 디자인 출원: 출원 전 디자인은 공개하지 않고 "준비 중"으로만 표기합니다.
-    // 출원 후에는 아래처럼 항목을 추가하세요 (물품명 + 출원번호 + 출원일 + 상태):
-    // { titleKo: "펜꽂이", titleEn: "Pen Holder", statusKo: "출원 완료", statusEn: "Filed",
-    //   appNo: "30-2026-0000000", appDate: "2026-00-00", descKo: "...", descEn: "..." }
-    // 등록되면 statusKo를 "등록"으로 바꾸고 등록번호를 regNo에 적습니다.
-    designs: [
-      {
-        titleKo: "육각기둥 연필꽂이",
-        titleEn: "Hexagonal Prism Pencil Holder",
-        statusKo: "출원 준비 중",
-        statusEn: "In preparation",
-        descKo: "3D 프린트로 만든 육각기둥 형태의 연필꽂이 디자인으로, 한국 디자인출원을 준비하고 있습니다.",
-        descEn: "A 3D-printed pencil holder in a hexagonal prism form. Preparing a Korean design application."
-      },
-      {
-        titleKo: "공벌레 마우스",
-        titleEn: "Pill Bug Mouse",
-        statusKo: "출원 준비 중",
-        statusEn: "In preparation",
-        descKo: "분절된 갑각 형태를 가진 컴퓨터 마우스 디자인으로, 한국 디자인출원을 준비하고 있습니다.",
-        descEn: "A computer mouse design with a segmented carapace form. Preparing a Korean design application."
-      },
-      {
-        titleKo: "다빈치탱크 연필홀더",
-        titleEn: "Da Vinci Tank Pencil Holder",
-        statusKo: "출원 준비 중",
-        statusEn: "In preparation",
-        descKo: "탱크 형태를 모티프로 한 연필홀더 디자인으로, 한국 디자인출원을 준비하고 있습니다.",
-        descEn: "A pencil holder design with a tank-shaped motif. Preparing a Korean design application."
-      }
-    ],
-    violin: {
-      titleEn: "Violin",
-      titleKo: "바이올린 연주",
-      descEn: "Playing violin as an artistic counterbalance to algorithmic rigor.",
-      descKo: "알고리즘 탐색의 긴장감을 정리해주는 바이올린 연주 활동.",
-    },
-    hobbies: [
-      { ko: "폴리토피아 (플레이 · 모드 · 봇 제작)", en: "Polytopia (playing, modding, bot building)" },
-      { ko: "체스 엔진 제작", en: "Building a chess engine" },
-      { ko: "3D 모델링 (Tinkercad)", en: "3D modeling (Tinkercad)" }
-    ]
-  }
+  ]
 };
 
 // Resolve an embedded image key (e.g. "butterfly") or pass through a normal URL
@@ -265,7 +221,7 @@ export default function App() {
   const [theme, setTheme] = useState("dark");
   const isDark = theme !== "light";
   const [lang, setLang] = useState("KO"); // "KO" | "EN"
-  const [activeTab, setActiveTab] = useState("home"); // home | problems | awards | projects | passions | contact
+  const [activeTab, setActiveTab] = useState("home"); // home | problems | awards | projects | contact
   
 
 
@@ -292,29 +248,6 @@ export default function App() {
             <button 
               className="flex items-center gap-3 group text-left focus:outline-none"
             >
-              <div className="relative">
-                {data.profile.avatarUrl ? (
-                  <img 
-                    src={resolveImg(data.profile.avatarUrl)}
-                    alt={data.profile.nameEn}
-                    style={{ width: 44, height: 44 }}
-                    className="w-11 h-11 rounded-full object-cover ring-1 ring-sky-500/30 group-hover:scale-110 transition-transform"
-                    onError={(e) => { 
-                      e.currentTarget.style.display = 'none'; 
-                      const fallback = e.currentTarget.nextElementSibling;
-                      if (fallback) fallback.style.display = 'flex';
-                    }}
-                  />
-                ) : null}
-
-                <div 
-                  className="w-10 h-10 rounded-full bg-gradient-to-br from-sky-500 to-indigo-600 flex items-center justify-center text-slate-950 font-bold font-mono text-sm ring-2 ring-sky-500/40 group-hover:scale-105 transition"
-                  style={{ display: data.profile.avatarUrl ? 'none' : 'flex' }}
-                >
-                  EL
-                </div>
-              </div>
-
               <div>
                 <span className={`font-bold text-sm tracking-wide block whitespace-nowrap group-hover:text-sky-400 transition ${
                   isDark ? 'text-slate-100' : 'text-slate-900'
@@ -337,13 +270,12 @@ export default function App() {
                 { id: 'problems', label: isEn ? 'Problems' : '투고 문제' },
                 { id: 'awards', label: isEn ? 'Awards' : '수상 실적' },
                 { id: 'projects', label: isEn ? 'Projects' : '프로젝트' },
-                { id: 'passions', label: isEn ? 'Designs & Hobbies' : '디자인출원 & 취미' },
                 { id: 'contact', label: isEn ? 'Contact' : '연락처' }
               ].map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-2.5 py-1.5 rounded-lg transition-all duration-200 whitespace-nowrap shrink-0 ${
+                  className={`px-2.5 py-1.5 rounded-none transition-all duration-200 whitespace-nowrap shrink-0 ${
                     activeTab === tab.id
                       ? isDark
                         ? 'bg-slate-800 text-sky-400 font-semibold shadow-sm border border-slate-700/60'
@@ -363,7 +295,7 @@ export default function App() {
             {/* Language Toggle */}
             <button
               onClick={() => setLang(isEn ? "KO" : "EN")}
-              className={`px-2 py-1 rounded text-xs font-mono border font-semibold transition ${
+              className={`px-2 py-1 rounded-none text-xs font-mono border font-semibold transition ${
                 isDark 
                   ? 'border-slate-700 hover:border-slate-500 text-slate-300 bg-slate-800/50' 
                   : 'border-slate-300 hover:border-slate-400 text-slate-700 bg-slate-100'
@@ -373,7 +305,7 @@ export default function App() {
             </button>
 
             {/* Theme Switcher: Dark / Light */}
-            <div className={`flex items-center p-0.5 rounded-lg border ${
+            <div className={`flex items-center p-0.5 rounded-none border ${
               isDark ? 'border-slate-700 bg-slate-800/50' : 'border-slate-300 bg-slate-100'
             }`}>
               {[
@@ -385,7 +317,7 @@ export default function App() {
                   onClick={() => setTheme(id)}
                   title={label}
                   aria-label={`${label} theme`}
-                  className={`p-1.5 rounded-md transition ${
+                  className={`p-1.5 rounded-none transition ${
                     theme === id ? active : isDark ? 'text-slate-400 hover:text-slate-200' : 'text-slate-500 hover:text-slate-800'
                   }`}
                 >
@@ -408,12 +340,6 @@ export default function App() {
             {/* Hero Section */}
             <div className="space-y-4">
 
-              {/* Minimal Age Badge */}
-              <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono tracking-tight border shadow-inner ${isDark ? 'bg-slate-900/40 text-sky-400 border-sky-900/50' : 'bg-white text-sky-700 border-sky-200'}`}>
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                <AgeCounter />
-              </div>
-
               <h1 className={`text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight ${
                 isDark ? 'text-slate-100' : 'text-slate-900'
               }`}>
@@ -428,7 +354,7 @@ export default function App() {
             </div>
 
             {/* Statement / Bio */}
-            <div className={`p-6 sm:p-8 rounded-2xl border ${
+            <div className={`p-6 sm:p-8 rounded-none border ${
               isDark ? 'bg-slate-900/50 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
             }`}>
               <h2 className={`text-xl font-bold mb-4 flex items-center gap-2 ${
@@ -459,7 +385,7 @@ export default function App() {
                 {data.principles.map((item) => (
                   <div 
                     key={item.num}
-                    className={`p-5 rounded-xl border transition-all duration-200 space-y-2.5 ${
+                    className={`p-5 rounded-none border transition-all duration-200 space-y-2.5 ${
                       isDark 
                         ? 'bg-slate-900/40 border-slate-800 hover:border-slate-700' 
                         : 'bg-white border-slate-200 shadow-sm hover:border-sky-300'
@@ -496,11 +422,11 @@ export default function App() {
 
             <div className="grid grid-cols-1 gap-4">
               {data.problems.map((prob) => (
-                <div key={prob.id} className={`border p-6 rounded-xl space-y-3 transition ${
+                <div key={prob.id} className={`border p-6 rounded-none space-y-3 transition ${
                   isDark ? 'bg-slate-900/60 border-slate-800 hover:border-slate-700' : 'bg-white border-slate-200 shadow-sm hover:border-sky-300'
                 }`}>
                   <div className="flex flex-wrap justify-between items-center gap-2">
-                    <span className={`text-xs font-mono px-2.5 py-1 rounded border ${
+                    <span className={`text-xs font-mono px-2.5 py-1 rounded-none border ${
                       isDark ? 'text-sky-400 bg-sky-950/60 border-sky-800/30' : 'text-sky-700 bg-sky-50 border-sky-200'
                     }`}>
                       {prob.contest}
@@ -515,7 +441,7 @@ export default function App() {
                         href={prob.url} 
                         target="_blank" 
                         rel="noreferrer"
-                        className="text-xs font-mono px-3 py-1.5 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold transition flex items-center gap-1 shadow-sm"
+                        className="text-xs font-mono px-3 py-1.5 rounded-none bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold transition flex items-center gap-1 shadow-sm"
                       >
                         {isEn ? "Open Problem ↗" : "문제 링크 ↗"}
                       </a>
@@ -545,12 +471,12 @@ export default function App() {
 
             <div className="grid grid-cols-1 gap-4">
               {data.awards.map((award, i) => (
-                <div key={i} className={`border p-6 rounded-xl space-y-3 transition ${
+                <div key={i} className={`border p-6 rounded-none space-y-3 transition ${
                   isDark ? 'bg-slate-900/50 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
                 }`}>
                   <div className="flex justify-between items-center text-xs font-mono">
                     <span className="text-sky-400 font-semibold">{award.org}</span>
-                    <span className={`px-2 py-0.5 rounded border ${isDark ? 'bg-slate-800 border-slate-700 text-slate-300' : 'bg-slate-100 border-slate-200 text-slate-700'}`}>{award.year}</span>
+                    <span className={`px-2 py-0.5 rounded-none border ${isDark ? 'bg-slate-800 border-slate-700 text-slate-300' : 'bg-slate-100 border-slate-200 text-slate-700'}`}>{award.year}</span>
                   </div>
                   <h3 className={`text-lg font-bold ${isDark ? 'text-slate-100' : 'text-slate-900'}`}>
                     {isEn ? award.titleEn : award.titleKo}
@@ -568,7 +494,7 @@ export default function App() {
                             key={img.key}
                             type="button"
                             onClick={() => setLightbox({ src: resolveImg(img.key), label })}
-                            className={`group text-left rounded-lg border overflow-hidden transition ${
+                            className={`group text-left rounded-none border overflow-hidden transition ${
                               isDark ? 'border-slate-700 hover:border-sky-500 bg-slate-950' : 'border-slate-200 hover:border-sky-400 bg-slate-50'
                             }`}
                           >
@@ -606,12 +532,12 @@ export default function App() {
 
             <div className="grid grid-cols-1 gap-6">
               {data.projects.map((proj) => (
-                <div key={proj.id} className={`p-6 rounded-2xl border space-y-4 ${
+                <div key={proj.id} className={`p-6 rounded-none border space-y-4 ${
                   isDark ? 'bg-slate-900/60 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
                 }`}>
                   <div className="flex justify-between items-start gap-4">
                     <div>
-                      <span className={`text-xs font-mono px-2.5 py-0.5 rounded-full inline-block mb-2 border ${isDark ? 'text-sky-400 bg-sky-950/60 border-sky-800/40' : 'text-sky-700 bg-sky-50 border-sky-200'}`}>
+                      <span className={`text-xs font-mono px-2.5 py-0.5 rounded-none inline-block mb-2 border ${isDark ? 'text-sky-400 bg-sky-950/60 border-sky-800/40' : 'text-sky-700 bg-sky-50 border-sky-200'}`}>
                         {proj.badge}
                       </span>
                       <h3 className={`text-xl font-bold ${isDark ? 'text-slate-100' : 'text-slate-900'}`}>
@@ -626,7 +552,7 @@ export default function App() {
 
                   <div className="flex flex-wrap gap-1.5 pt-1">
                     {proj.tech.map((t) => (
-                      <span key={t} className={`text-xs font-mono px-2 py-0.5 rounded border ${
+                      <span key={t} className={`text-xs font-mono px-2 py-0.5 rounded-none border ${
                         isDark ? 'bg-slate-800 border-slate-700 text-slate-300' : 'bg-slate-100 border-slate-200 text-slate-700'
                       }`}>
                         {t}
@@ -640,7 +566,7 @@ export default function App() {
                     <a
                       href={"data:text/x-python;charset=utf-8," + encodeURIComponent(CALC_PY_SOURCE)}
                       download="Calculator_1.0.py"
-                      className="text-xs font-mono px-3.5 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold transition shadow-sm"
+                      className="text-xs font-mono px-3.5 py-2 rounded-none bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold transition shadow-sm"
                     >
                       {isEn ? "Download (.py) ↓" : "다운로드 (.py) ↓"}
                     </a>
@@ -650,7 +576,7 @@ export default function App() {
                       href={proj.liveUrl} 
                       target="_blank" 
                       rel="noreferrer"
-                      className="text-xs font-mono px-3.5 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold transition flex items-center gap-1.5 shadow-sm"
+                      className="text-xs font-mono px-3.5 py-2 rounded-none bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold transition flex items-center gap-1.5 shadow-sm"
                     >
                       <span>Live Site ↗</span>
                     </a>
@@ -660,7 +586,7 @@ export default function App() {
                       href={proj.githubUrl} 
                       target="_blank" 
                       rel="noreferrer"
-                      className={`text-xs font-mono px-3.5 py-2 rounded-lg border transition ${
+                      className={`text-xs font-mono px-3.5 py-2 rounded-none border transition ${
                         isDark 
                           ? 'border-slate-700 hover:border-slate-500 text-slate-300 bg-slate-800/60' 
                           : 'border-slate-300 hover:border-slate-400 text-slate-700 bg-slate-100'
@@ -677,85 +603,6 @@ export default function App() {
           </div>
         )}
 
-        {/* TAB 5: DESIGN FILINGS, VIOLIN & HOBBIES */}
-        {activeTab === 'passions' && (
-          <div className="space-y-8 animate-fadeIn">
-            <div className="space-y-1.5">
-              <h1 className={`text-3xl font-bold tracking-tight ${isDark ? 'text-slate-100' : 'text-slate-900'}`}>
-                {isEn ? "Design Filings, Violin & Interests" : "디자인 출원, 바이올린 & 관심 분야"}
-              </h1>
-              <p className={`text-sm ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
-                {isEn ? "Design application progress, violin performances, and personal interests." : "디자인 출원 진행 내역과 바이올린 연주, 관심 분야입니다."}
-              </p>
-            </div>
-
-            {/* Design filings */}
-            <div className="grid grid-cols-1 gap-4">
-              {data.passions.designs.map((d, i) => (
-                <div key={i} className={`p-6 rounded-2xl border space-y-3 ${
-                  isDark ? 'bg-slate-900/60 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
-                }`}>
-                  <div className="flex flex-wrap items-center justify-between gap-2">
-                    <h3 className={`text-lg font-bold ${isDark ? 'text-slate-100' : 'text-slate-900'}`}>
-                      {isEn ? d.titleEn : d.titleKo}
-                    </h3>
-                    <span className={`text-xs font-mono px-2 py-0.5 rounded border ${
-                      d.appNo
-                        ? (isDark ? 'bg-emerald-950 text-emerald-400 border-emerald-800' : 'bg-emerald-50 text-emerald-700 border-emerald-300')
-                        : (isDark ? 'bg-amber-950/80 text-amber-400 border-amber-800' : 'bg-amber-50 text-amber-700 border-amber-300')
-                    }`}>
-                      {isEn ? d.statusEn : d.statusKo}
-                    </span>
-                  </div>
-                  {(d.appNo || d.regNo) && (
-                    <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs font-mono text-slate-400">
-                      {d.appNo && <span>{isEn ? "Application No." : "출원번호"} {d.appNo}{d.appDate ? ` (${d.appDate})` : ""}</span>}
-                      {d.regNo && <span>{isEn ? "Registration No." : "등록번호"} {d.regNo}</span>}
-                    </div>
-                  )}
-                  <p className={`text-sm leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
-                    {isEn ? d.descEn : d.descKo}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            {/* Violin */}
-            <div className={`p-6 rounded-2xl border space-y-4 ${
-              isDark ? 'bg-slate-900/60 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
-            }`}>
-              <div className="space-y-1.5">
-                <h3 className={`text-lg font-bold ${isDark ? 'text-slate-100' : 'text-slate-900'}`}>
-                  {isEn ? data.passions.violin.titleEn : data.passions.violin.titleKo}
-                </h3>
-                <p className={`text-sm leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
-                  {isEn ? data.passions.violin.descEn : data.passions.violin.descKo}
-                </p>
-              </div>
-
-            </div>
-
-            {/* Interests */}
-            <div className={`p-6 rounded-2xl border space-y-3 ${
-              isDark ? 'bg-slate-900/40 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
-            }`}>
-              <h3 className={`text-sm font-bold font-mono ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>
-                {isEn ? "Interests" : "관심 분야"}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {data.passions.hobbies.map((hobby, idx) => (
-                  <span key={idx} className={`text-xs font-mono px-3 py-1.5 rounded-lg border ${
-                    isDark ? 'bg-slate-800/80 border-slate-700 text-slate-300' : 'bg-slate-100 border-slate-200 text-slate-700'
-                  }`}>
-                    {isEn ? hobby.en : hobby.ko}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-          </div>
-        )}
-
         {/* TAB 6: CONTACT */}
         {activeTab === 'contact' && (
           <div className="space-y-8 animate-fadeIn max-w-2xl mx-auto pt-2">
@@ -766,17 +613,17 @@ export default function App() {
               </p>
             </div>
 
-            <div className={`border rounded-2xl p-6 sm:p-8 space-y-4 ${
+            <div className={`border rounded-none p-6 sm:p-8 space-y-4 ${
               isDark ? 'bg-slate-900/60 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
             }`}>
               {/* Email */}
               <a 
                 href={`mailto:${data.profile.email}`}
-                className={`flex items-center gap-4 p-4 rounded-xl border transition group ${
+                className={`flex items-center gap-4 p-4 rounded-none border transition group ${
                   isDark ? 'bg-slate-800/50 hover:bg-slate-800 border-slate-700/50' : 'bg-slate-50 hover:bg-slate-100 border-slate-200'
                 }`}
               >
-                <div className={`p-3 rounded-lg transition ${isDark ? 'bg-sky-950/80 text-sky-400' : 'bg-sky-50 text-sky-700'} group-hover:bg-sky-500 group-hover:text-slate-950`}>
+                <div className={`p-3 rounded-none transition ${isDark ? 'bg-sky-950/80 text-sky-400' : 'bg-sky-50 text-sky-700'} group-hover:bg-sky-500 group-hover:text-slate-950`}>
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
@@ -790,12 +637,12 @@ export default function App() {
                 href={data.profile.solvedAc}
                 target="_blank"
                 rel="noreferrer"
-                className={`flex items-center justify-between p-4 rounded-xl border transition group ${
+                className={`flex items-center justify-between p-4 rounded-none border transition group ${
                   isDark ? 'bg-slate-800/50 hover:bg-slate-800 border-slate-700/50' : 'bg-slate-50 hover:bg-slate-100 border-slate-200'
                 }`}
               >
                 <div className="flex items-center gap-4">
-                  <div className={`p-3 rounded-lg font-bold font-mono text-sm ${isDark ? 'bg-emerald-950/80 text-emerald-400' : 'bg-emerald-50 text-emerald-700'}`}>
+                  <div className={`p-3 rounded-none font-bold font-mono text-sm ${isDark ? 'bg-emerald-950/80 text-emerald-400' : 'bg-emerald-50 text-emerald-700'}`}>
                     S.ac
                   </div>
                   <div>
@@ -811,12 +658,12 @@ export default function App() {
                 href={data.profile.dojUser}
                 target="_blank"
                 rel="noreferrer"
-                className={`flex items-center justify-between p-4 rounded-xl border transition group ${
+                className={`flex items-center justify-between p-4 rounded-none border transition group ${
                   isDark ? 'bg-slate-800/50 hover:bg-slate-800 border-slate-700/50' : 'bg-slate-50 hover:bg-slate-100 border-slate-200'
                 }`}
               >
                 <div className="flex items-center gap-4">
-                  <div className={`p-3 rounded-lg font-bold font-mono text-sm ${isDark ? 'bg-indigo-950/80 text-indigo-400' : 'bg-indigo-50 text-indigo-700'}`}>
+                  <div className={`p-3 rounded-none font-bold font-mono text-sm ${isDark ? 'bg-indigo-950/80 text-indigo-400' : 'bg-indigo-50 text-indigo-700'}`}>
                     DOJ
                   </div>
                   <div>
@@ -832,12 +679,12 @@ export default function App() {
                 href={data.profile.altocodeUser}
                 target="_blank"
                 rel="noreferrer"
-                className={`flex items-center justify-between p-4 rounded-xl border transition group ${
+                className={`flex items-center justify-between p-4 rounded-none border transition group ${
                   isDark ? 'bg-slate-800/50 hover:bg-slate-800 border-slate-700/50' : 'bg-slate-50 hover:bg-slate-100 border-slate-200'
                 }`}
               >
                 <div className="flex items-center gap-4">
-                  <div className={`p-3 rounded-lg font-bold font-mono text-sm ${isDark ? 'bg-amber-950/80 text-amber-400' : 'bg-amber-50 text-amber-700'}`}>
+                  <div className={`p-3 rounded-none font-bold font-mono text-sm ${isDark ? 'bg-amber-950/80 text-amber-400' : 'bg-amber-50 text-amber-700'}`}>
                     ALTO
                   </div>
                   <div>
@@ -879,7 +726,7 @@ export default function App() {
           <img
             src={lightbox.src}
             alt={lightbox.label}
-            className="max-w-full rounded-lg shadow-2xl"
+            className="max-w-full rounded-none shadow-2xl"
             style={{ maxHeight: "85vh" }}
           />
           <div className="text-xs font-mono text-slate-300">{lightbox.label} · {isEn ? "click to close" : "클릭하면 닫힙니다"}</div>
